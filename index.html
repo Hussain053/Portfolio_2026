@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hussain Patanwala | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f5f7fa;
+      color: #1f2933;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: #2563eb;
+    }
+
+    header {
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav h2 {
+      font-size: 20px;
+      color: #111827;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav a {
+      color: #374151;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h3 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #111827;
+    }
+
+    
+
+/* Mobile behavior */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;   
+  }
+
+  
+}
+    .about {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;      
+  text-align: center;
+  gap: 20px;
+}
+
+.about img {
+  width: 220px;
+  border-radius: 12px;
+  border: 3px solid #2563eb;
+  display: block;
+}
+
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .skills .card {
+      text-align: center;
+      font-weight: 600;
+    }
+
+    footer {
+      background: #111827;
+      color: #ffffff;
+      text-align: center;
+      padding: 24px 10px;
+    }
+
+    footer span {
+      color: #38bdf8;
+      font-weight: bold;
+    }
+
+    .social-links {
+      margin-top: 10px;
+    }
+
+    .social-links a {
+      color: #ffffff;
+      margin: 0 12px;
+      font-size: 15px;
+    }
+
+    .social-links a:hover {
+      color: #38bdf8;
+    }
+
+    @media (max-width: 768px) {
+      .nav ul {
+        display: none;
+      }
+
+      .about {
+        text-align: center;
+        justify-content: center;
+      }
+    }
+    #menu-toggle {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #ffffff;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  #menu-toggle:checked + .menu-btn + .nav-links {
+    display: flex;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+  <h2>Hussain Patanwala</h2>
+
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="menu-btn">☰</label>
+
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+  </ul>
+</nav>
+
+  </header>
+
+  <main class="container">
+   <section id="about">
+  <h3>About Me</h3>
+  <div class="about">
+    <img src="kws.jpeg" alt="Hussain Patanwala" />
+    <p>
+      I’m Hussain, Second Year Engineering Student, a Aspiring Software developer and AI enthusiast pursuing a
+      Bachelor’s degree in Information Technology at PVG’s COET, Pune. I enjoy
+      building clean, responsive, and user-friendly web interfaces while
+      blending creativity with structured code.
+      <br><br>
+      I am passionate about learning modern technologies, contributing to
+      communities, and continuously improving my skills in development and
+      design.
+    </p>
+  </div>
+</section>
+
+
+    <section id="skills" class="skills">
+      <h3>Skills</h3>
+      <div class="card-grid">
+        <div class="card">HTML5</div>
+        <div class="card">CSS3</div>
+        <div class="card">JavaScript</div>
+        <div class="card">Git & GitHub</div>
+        <div class="card">Python</div>
+        <div class="card">React</div>
+        <div class="card">Tailwind CSS</div>
+        <div class="card">Communication</div>
+        <div class="card">Time Management</div>
+        <div class="card">OOP Concepts</div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h3>Projects</h3>
+      <div class="card-grid">
+        <div class="card">
+          <h4><a href="https://hussain053.github.io/CEP_Group_Project/" target="_blank">Aqua Flow – Urban Water Management Platform</a></h4>
+          <p>
+            Developed a Full Stack  community-driven platform for urban water supply and
+            drainage management in Pune. The system enables citizens to report
+            issues, track complaints, and improve communication between
+            authorities and residents.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4><a href="https://www.tedxpvgcoet.in/" target="_blank">TEDx PVGCOET – Official Website</a></h4>
+          <p>
+            Worked as a Front-End Developer in a team of five to build the
+            official TEDx PVGCOET website using React. Contributed to UI
+            development, UX improvements, and bug fixes.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4><a href="https://github.com/Internkingss/Internkings_Frontend" target="_blank">AI-Based Internship Recommendation System (SIH 2025)</a></h4>
+          <p> 
+            Built the Front-end interface using HTML, CSS, and JavaScript for a
+            Smart India Hackathon project. The platform recommends internships
+            based on user profiles. Selected in the internal round of SIH 2025.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4><a href="https://github.com/Hussain053/Inventory-Management-and-Billing-Software" target="_blank">Inventory Management & Billing Software</a></h4>
+          <p>
+            Designed a web-based inventory and billing system for small
+            businesses to track products, sales, and stock levels, reflecting
+            my interest in fintech solutions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h3>Work Experience</h3>
+      <div class="card-grid">
+        <div class="card">
+          <h4>Technical Team Member – TEDx PVGCOET</h4>
+          <p><em>July 2025 – October 2025</em></p>
+          <p>
+            Worked as a Front-End Developer in a team of five. Developed and
+            maintained UI components using React, fixed bugs, and collaborated
+            using GitHub for version control.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Finance Team Member – ACM Student Chapter, PVGCOET</h4>
+          <p><em>August 2025 – Present</em></p>
+          <p>
+            Core team member responsible for managing club finances. Designed
+            efficient budgets for events such as hackathons and ideathons,
+            demonstrating strong planning and organizational skills.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Associate Member – Training & Placement Cell, PVG’s COET</h4>
+          <p><em>August 2025 – October 2025</em></p>
+          <p>
+            Assisted in internal data management and document verification of
+            final-year students. Generated professional reports for recruiting
+            companies and supported administrative workflows.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h3>Education</h3>
+      <div class="card-grid">
+        <div class="card">
+          <h4>B.E. in Information Technology – PVG’s COET, Pune (SPPU)</h4>
+          <p>2024 – Present</p>
+          <p>Maintaining strong academics while developing industry-relevant skills.</p>
+        </div>
+
+        <div class="card">
+          <h4>HSC – NAMO RIMS Junior College</h4>
+          <p>2023 – 2024</p>
+          <p>80% in HSC | 80%ile in JEE Mains 2024 | 97.60%ile in MHT-CET 2024</p>
+        </div>
+
+        <div class="card">
+          <h4>CBSE 10th – Sinhgad Institutes</h4>
+          <p>2021 – 2022</p>
+          <p>Scored 87.80% in the CBSE Board Examination</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by <span>Hussain Patanwala</span></p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/hussain-patanwala-9881b6328/" target="_blank">LinkedIn</a>
+      <a href="mailto:hussainpatanwala6@gmail.com">Email</a>
+      <a href="https://www.instagram.com/hussainn_53/" target="_blank">Instagram</a>
+    </div>
+  </footer>
+</body>
+</html>
